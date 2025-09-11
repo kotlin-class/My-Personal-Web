@@ -492,6 +492,8 @@ function updateBackground() {
     case 'favourites':
       imageUrl = 'icons/Screenshot (8487).png';
       break;
+    case 'map':
+      imageUrl = 'icons/Screenshot (8474).png';
     case 'contact':
       imageUrl = 'icons/Screenshot (8484).png';
       break;
