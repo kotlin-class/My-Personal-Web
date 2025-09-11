@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Com</title>
+  <link rel="icon" href="icons/buhafavicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="logo"><strong>My Personal Website</strong></div>
+  </div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="#home"><img src="icons/home.png" alt="Home"></a>
+  <a href="#about"><img src="icons/user (4).png" alt="About"></a>
+  <a href="#skills"><img src="icons/cog.png" alt="Skills"></a>
+  <a href="#projects"><img src="icons/file.png" alt="Projects"></a>
+  <a href="#schedule"><img src="icons/calendar-detail (2).png" alt="Schedule"></a>
+  <a href="#gallery"><img src="icons/images (5).png" alt="Gallery"></a>
+  <a href="#favourites"><img src="icons/star-square.png" alt="Contact"></a>
+  <a href="#map"><img src="icons/location (1).png" alt="Map"></a>
+  <a href="#contact"><img src="icons/phone (3).png" alt="Contact"></a>
+</div>
+
+<div class="burger-menu">
+  <button id="burger-btn">☰</button>
+  <div id="burger-dropdown" class="burger-dropdown">
+    <a href="#home"><img src="icons/home.png" alt="Home"></a>
+    <a href="#about"><img src="icons/user (4).png" alt="About"></a>
+    <a href="#skills"><img src="icons/cog.png" alt="Skills"></a>
+    <a href="#projects"><img src="icons/file.png" alt="Projects"></a>
+    <a href="#schedule"><img src="icons/calendar-detail (2).png" alt="Schedule"></a>
+    <a href="#gallery"><img src="icons/images (5).png" alt="Gallery"></a>
+    <a href="#favourites"><img src="icons/star-square.png" alt="Favourites"></a>
+    <a href="#map"><img src="icons/location (1).png" alt="Map"></a>
+    <a href="#contact"><img src="icons/phone (3).png" alt="Contact"></a>
+  </div>
+</div>
+
+  <!-- Content -->
+  <div class="content">
+    <section id="home" class="section">
+  <!-- Hero Banner -->
+  <div class="home-hero">
+    <div class="hero-overlay">
+      <h1>Welcome Aboard</h1>
+      <p>
+        Navigate through my personal portfolio.  
+        Explore my journey, skills, projects, and favorite media.
+      </p>
+      <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+  Explore More </button>
+    </div>
+  </div>
+
+  <!-- Quick Highlights -->
+  <div class="home-highlights">
+    <div class="highlight-card">
+  <h3>⚓ About Me</h3>
+  <p>Learn more about who I am and my personal journey.</p>
+  <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">Go</button>
+</div>
+
+<div class="highlight-card">
+  <h3>🛠 Skills</h3>
+  <p>Discover the technologies and expertise I’ve mastered.</p>
+  <button class="cta-button" onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });">Go</button>
+</div>
+
+<div class="highlight-card">
+  <h3>📂 Projects</h3>
+  <p>Browse through my works</p>
+  <button class="cta-button" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">Go</button>
+</div>
+
+<div class="highlight-card">
+  <h3>⭐ Favourites</h3>
+  <p>Check out the music, videos, movies, and books I enjoy.</p>
+  <button class="cta-button" onclick="document.getElementById('favourites').scrollIntoView({ behavior: 'smooth' });">Go</button>
+</div>
+  </div>
+</section>
+
+    <section id="about" class="banner about-banner">
+  <div class="about-container">
+    <!-- Left: Profile -->
+    <div class="about-profile">
+      <img src="icons/1685972731014 copy.png" alt="Profile Picture">
+      <h3>Allen Jaboc</h3>
+      <p>Web Developer / IT Student</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Contact</button>
+    </div>
+
+    <!-- Center: Introduction -->
+    <div class="about-description">
+  <h2>About Me</h2>
+  <p>
+    Hello! I’m Allen Paul L. Jaboc, an IT student and aspiring developer.  
+    I enjoy working on projects that has strong features and functionality.  
+  </p>
+  <h4>Interests</h4>
+  <ul>
+    <li>⚓ Naval history & Ships Designs</li>
+    <li>🎮 Simulation games & mods</li>
+    <li>📚 Reading technical books & history</li>
+    <li>🎶 Collecting classic military music</li>
+  </ul>
+</div>
+
+    <!-- Right: Quick Stats (like ship stats) -->
+    <div class="about-stats">
+      <h3>Quick Info</h3>
+      <ul>
+        <li>🎓 Student</li>
+        <li>💻 Java, HTML, CSS, Python</li>
+        <li>⚓ Favorite Game: WOWs</li>
+        <li>📍 Location: Philippines</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+    <section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <span>HTML & CSS</span>
+      <div class="progress-bar"><div style="width: 60%"></div></div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="progress-bar"><div style="width: 35%"></div></div>
+    </div>
+    <div class="skill">
+      <span>Java</span>
+      <div class="progress-bar"><div style="width: 45%"></div></div>
+    </div>
+    <div class="skill">
+      <span>SQL</span>
+      <div class="progress-bar"><div style="width: 30%"></div></div>
+    </div>
+    <div class="skill">
+      <span>Python</span>
+      <div class="progress-bar"><div style="width: 50%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <!-- Collage-style Banner with button -->
+  <div class="projects-banner">
+    <div class="projects-collage">
+      <img src="icons/Screenshot (8495).png" alt="Collage 1">
+      <img src="icons/Screenshot (8496).png" alt="Collage 2">
+      <img src="icons/Screenshot (8498).png" alt="Collage 3">
+    </div>
+    <button class="projects-btn" onclick="toggleProjects()">View Projects</button>
+  </div>
+
+  <!-- Dropdown content -->
+<div id="projects-content" class="projects-content">
+  <div class="project-card" data-tooltip="Bootstrap Demo" onclick="window.location.href='bootstrap.html'">
+    <img src="icons/bootstrap-fill.svg" alt="Bootstrap Demo">
+  </div>
+
+  <div class="project-card" data-tooltip="MyGPT" onclick="window.location.href='gpt.html'">
+    <img src="icons/openai.svg" alt="MyGPT">
+  </div>
+
+  <div class="project-card" data-tooltip="Medicine Reminder" onclick="window.location.href='medicin.html'">
+    <img src="icons/heart-pulse.svg" alt="Medicine Reminder">
+  </div>
+</div>
+</section>
+
+   <section id="schedule">
+  <h2>Schedule</h2>
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Morning</th>
+        <th>Afternoon</th>
+        <th>Evening</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td>Classes</td>
+        <td>Project Work</td>
+        <td>Gaming</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Study</td>
+        <td>Lab Work</td>
+        <td>Workout</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Classes</td>
+        <td>Internship</td>
+        <td>Free Time</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Study</td>
+        <td>Project Work</td>
+        <td>Movie Night</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Classes</td>
+        <td>Research</td>
+        <td>Friends</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <!-- Gallery Banner -->
+  <div class="gallery-banner">
+    <div class="collage">
+      <div class="slice"><img src="images/image1.jpg" alt="Gallery image 1"></div>
+      <div class="slice"><img src="images/image2.jpg" alt="Gallery image 2"></div>
+      <div class="slice"><img src="images/image3.jpg" alt="Gallery image 3"></div>
+      <div class="slice"><img src="images/image4.jpg" alt="Gallery image 4"></div>
+      <div class="slice"><img src="images/image5.jpg" alt="Gallery image 5"></div>
+    </div>
+    <div class="gallery-overlay">
+      <button class="cta-btn" onclick="toggleGallery()">See Gallery</button>
+    </div>
+  </div>
+
+  <!-- Gallery Dropdown Content -->
+  <div id="gallery-content" class="gallery-content">
+
+    <!-- Images Subsection -->
+    <div class="gallery-subsection">
+      <h3 onclick="toggleSubsection('images-sub')">📷 Images</h3>
+      <div id="images-sub" class="subsection-content">
+        <div class="gallery-grid">
+          <img src="images/image1.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image2.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image3.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image4.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image5.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image6.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image7.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image8.png" alt="image" onclick="openPreview(this)">
+          <img src="images/image9.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image10.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image11.jpg" alt="image" onclick="openPreview(this)">
+          <img src="images/image12.png" alt="image" onclick="openPreview(this)">
+          <img src="images/image13.png" alt="image" onclick="openPreview(this)">
+          <img src="images/image14.jpg" alt="image" onclick="openPreview(this)">
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos Subsection -->
+    <div class="gallery-subsection">
+      <h3 onclick="toggleSubsection('videos-sub')">🎥 Videos</h3>
+      <div id="videos-sub" class="subsection-content">
+        <div class="gallery-videos">
+          <video width="320" onclick="openPreview(this)">
+            <source src="videos/demo1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video width="320" onclick="openPreview(this)">
+            <source src="videos/demo2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video width="320" onclick="openPreview(this)">
+            <source src="videos/demo3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Favourites Section -->
+<section id="favourites" class="section">
+  <h2>Favourites</h2>
+
+  <!-- Favourites: Music Carousel -->
+<div class="favourite-category" id="music-category">
+  <h3>Music</h3>
+  <div class="favourite-carousel">
+    <div class="favourite-grid">
+      <!-- Music Card -->
+      <div class="music-card" data-title="Kino - The Star">
+        <img src="icons/Zvezda_po_imeni_Solntse_1989_magnitizdat.jpg" alt="Kino - The Star">
+        <p>Kino - The Star</p>
+        <audio src="music/Kino - The Star.mp3"></audio>
+      </div>
+
+      <div class="music-card" data-title="Kino - Gruppa Krovi.mp3">
+        <img src="icons/Группа_крови.png" alt="Kino - Gruppa Krovi.mp3">
+        <p>Kno - Gruppa Krovi</p>
+        <audio src="music/Kino - Gruppa Krovi.mp3"></audio>
+      </div>
+
+      <div class="music-card" data-title="Zemlyane - Grass near home.mp3">
+        <img src="icons/ab67616d0000b27315d160873dcfe256c3a3b6e3.jpg" alt="Zemlyane - Grass near home.mp3">
+        <p>Zemlyane- Grass Near Home</p>
+        <audio src="music/Zemlyane - Grass near home.mp3"></audio>
+      </div>
+
+      <div class="music-card" data-title="Rostov - Lottery">
+        <img src="icons/artworks-jPKPZx9AyVGyxuFs-PIZBzA-t500x500.jpg" alt="Rostov - Lottery">
+        <p>Rostov - Lottery</p>
+        <audio src="music/Rostov - Lottery.mp3"></audio>
+      </div>
+
+      <div class="music-card" data-title="Swallowing Dust">
+        <img src="icons/artworks-Fafz1fQaedMWe8hw-50oTWw-t500x500.jpg" alt="Swallowing Dust">
+        <p>Swallowing Dust</p>
+        <audio src="music/Swallowing Dust.mp3"></audio>
+      </div>
+    </div>
+
+    <!-- Optional Scroll Buttons -->
+    <button class="scroll-btn left" onclick="scrollLeft('music-category')">⟨</button>
+    <button class="scroll-btn right" onclick="scrollRight('music-category')">⟩</button>
+  </div>
+</div>
+
+<!-- Favourites: YouTube Videos -->
+<div class="favourite-category">
+  <h3>YouTube Videos</h3>
+  <div class="favourite-carousel">
+    <button class="scroll-btn left" onclick="scrollLeft('videos-grid')">⟨</button>
+
+    <div class="favourite-grid" id="videos-grid">
+      <!-- Video Card -->
+      <div class="video-card" onclick="expandVideo(this)">
+        <img src="icons/MJ8bjy7ATZU-HD.jpg" alt="Video Thumbnail">
+        <p class="video-title">А Если Повезет</p>
+        <p>Yepatoria</p>
+        <iframe src="https://www.youtube.com/embed/MJ8bjy7ATZU"
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-card" onclick="expandVideo(this)">
+        <img src="icons/Cz6Nv0QiXoc-HD.jpg" alt="Video Thumbnail">
+        <p class="video-title">FAITH: The Unholy Trinity</p>
+        <p>Wendigoon</p>
+        <iframe src="https://www.youtube.com/embed/Cz6Nv0QiXoc"
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-card" onclick="expandVideo(this)">
+        <img src="icons/QESD2BizPO4-HD.jpg" alt="Video Thumbnail">
+        <p class="video-title">Soviet Battleships. Cinematic</p>
+        <p>WOWs Official</p>
+        <iframe src="https://www.youtube.com/embed/QESD2BizPO4"
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-card" onclick="expandVideo(this)">
+        <img src="icons/aCjE8LKSTe8-SD.jpg" alt="Video Thumbnail">
+        <p class="video-title">Vesyolye Rebyata - Cars</p>
+        <p>Omnistar East</p>
+        <iframe src="https://www.youtube.com/embed/aCjE8LKSTe8"
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <button class="scroll-btn right" onclick="scrollRight('videos-grid')">⟩</button>
+  </div>
+</div>
+
+  <!-- Movies -->
+  <div class="favourites-category">
+    <h3>Movies</h3>
+    <div class="carousel-container">
+      <button class="scroll-btn left">‹</button>
+      <div class="favourites-carousel">
+        <!-- Example real movie -->
+        <div class="fav-card"><img src="icons/MV5BYTc5YTlmYWEtMzRjYy00ZWE5LTgwZTUtMzMwMDA1OGZlOGEzXkEyXkFqcGc@._V1_.jpg" alt="Greyhound"><p>Greyhound (2020)</p></div>
+        <div class="fav-card"><img src="icons/images (25).jpg" alt="Saving Private Ryan"><p>Saving Private Ryan (1998)</p></div>
+        <div class="fav-card"><img src="icons/South-Park-Bigger-Longer-and-Uncut-1999-27x40-Movie-9.webp" alt="South Park: Bigger, Longer & Uncut (1999)"><p>South Park: Bigger, Longer & Uncut (1999)</p></div>
+        <div class="fav-card"><img src="icons/T-34_(film).jpeg" alt="T-34"><p>T-34 (2018)</p></div>
+        <div class="fav-card"><img src="icons/Black_hawk_down_ver1.jpg" alt="BHD"><p>Black Hawk Down (2001)</p></div>
+        <div class="fav-card"><img src="icons/download (30).jpg" alt="TNG"><p>The Naked Gun (1988-1994)</p></div>
+      </div>
+      <button class="scroll-btn right">›</button>
+    </div>
+  </div>
+
+  <!-- Books -->
+  <div class="favourites-category">
+    <h3>Books</h3>
+    <div class="carousel-container">
+      <button class="scroll-btn left">‹</button>
+      <div class="favourites-carousel">
+        <!-- Example real book -->
+        <div class="fav-card"><img src="icons/33.jpg" alt="Book 1"><p>J.J.R. Tolkien - The Lord of the Rings</p></div>
+        <div class="fav-card"><img src="icons/1587498415.jpg" alt="Book 2"><p>Peter Samsomonov - Designing The T-34</p></div>
+        <div class="fav-card"><img src="icons/Roadside-picnic-macmillan-cover.jpg" alt="Book 3"><p>Arkady & Boris - Roadside Picnic</p></div>
+        <div class="fav-card"><img src="icons/TM_31-210_Improvised_Munitions_Handbook (1).gif" alt="Book 4"><p>US Army - Improvised Munitions Handbook</p></div>
+        <div class="fav-card"><img src="icons/42748909.jpg" alt="Book 5"><p>C.S. Forester - The Good Shepherd</p></div>
+        <div class="fav-card"><img src="icons/HuntForRedOctober.jpg" alt="Book 6"><p>Tom Clancy - The Hunt for Red October</p></div>
+      </div>
+      <button class="scroll-btn right">›</button>
+    </div>
+  </div>
+  </div>
+
+<!-- Map Section -->
+<section id="map" class="section">
+  <h2>Find Me</h2>
+  <div class="map-container">
+    <!-- Example: Google Maps Embed -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d940.4588387161181!2d125.64364343464351!3d7.279821006991798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1757561700198!5m2!1sen!2sph" width="600" 
+width="100%" 
+height="450"
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-card">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Allen Jaboc. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Floating Music Player Overlay -->
+<div id="music-player" class="music-player collapsed">
+  <div class="music-header" onclick="toggleMusicPlayer()">
+    <!-- Custom icon -->
+    <img id="music-icon" src="icons/play.png" alt="Music Icon">
+    <span id="music-title"></span>
+    <span id="music-toggle">⯈</span>
+  </div>
+  <div class="music-body">
+    <audio id="music-overlay-player" controls></audio>
+  </div>
+</div>
+
+<!-- Lightbox / Preview (place near end of body) -->
+<div id="lightbox" aria-hidden="true">
+  <button id="lightbox-close" class="lightbox-control" aria-label="Close preview">✖</button>
+  <button id="lightbox-prev" class="lightbox-control" aria-label="Previous">◀</button>
+  <div id="lightbox-content" role="dialog" aria-modal="true"></div>
+  <button id="lightbox-next" class="lightbox-control" aria-label="Next">▶</button>
+</div>
+
+<!-- Tooltip container -->
+<div id="tooltip" class="tooltip"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

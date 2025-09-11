@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicine Reminder — Mockup</title>
+  <!-- Using Bootstrap 5 for quick layout and components -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#4f9dff;
+      --accent-dark:#2c7adf;
+      --bg-light:#f0f6ff;
+    }
+    body{
+      background:linear-gradient(180deg,#eaf4ff 0%, #ffffff 100%);
+      font-family:'Segoe UI',sans-serif;
+      color:#333;
+    }
+    .app-shell{
+      max-width:980px;
+      margin:32px auto;
+      padding:24px;
+    }
+    .pill-card{
+      border-left:6px solid var(--accent);
+      transition:.2s ease-in-out;
+      background:linear-gradient(90deg, #ffffff 0%, #f9fbff 100%);
+    }
+    .pill-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 6px 16px rgba(0,0,0,0.12);
+    }
+    .time-badge{
+      font-weight:700;
+      color:var(--accent-dark);
+      font-size:1.05rem;
+    }
+    .next-dose{font-size:.9rem;color:#2f6b9a;font-style:italic}
+    .list-scroll{max-height:360px;overflow:auto}
+    .small-muted{font-size:.85rem;color:#6c757d}
+
+    .nav-tabs .nav-link{
+      border:none;
+      border-bottom:3px solid transparent;
+      color:#555;
+      font-size:1rem;
+      padding:.75rem 1.25rem;
+    }
+    .nav-tabs .nav-link.active{
+      color:var(--accent);
+      font-weight:600;
+      border-bottom:3px solid var(--accent);
+      background-color:#f8fbff;
+      border-radius:6px 6px 0 0;
+    }
+
+    .card{
+      border:none;
+      box-shadow:0 3px 10px rgba(0,0,0,0.08);
+      border-radius:12px;
+    }
+    .btn-primary{
+      background:var(--accent);
+      border-color:var(--accent);
+      font-weight:600;
+    }
+    .btn-primary:hover{
+      background:var(--accent-dark);
+      border-color:var(--accent-dark);
+    }
+    .progress{
+      background:#e0ecff;
+      border-radius:20px;
+    }
+    .progress-bar{
+      background:linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+      border-radius:20px;
+    }
+    header h3{
+      color:var(--accent-dark);
+      font-weight:700;
+    }
+    h5,h6,label{color:#2f4059;}
+    input, select, textarea{
+      border-radius:8px!important;
+    }
+    #addTab .card{
+      background:linear-gradient(180deg, #fdfdff 0%, #f8fbff 100%);
+    }
+    #addTab h5{
+      border-bottom:2px solid var(--accent);
+      padding-bottom:8px;
+    }
+    footer{
+      text-align:center;
+      margin-top:2rem;
+      font-size:.85rem;
+      color:#666;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell bg-white rounded-3 shadow-sm">
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs mb-3" id="appTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#homeTab" type="button" role="tab">Reminders</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="add-tab" data-bs-toggle="tab" data-bs-target="#addTab" type="button" role="tab">Add Reminder</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Reminders Tab -->
+      <div class="tab-pane fade show active" id="homeTab" role="tabpanel">
+        <header class="d-flex align-items-center justify-content-between mb-3">
+          <div>
+            <h3 class="mb-0">Medicine Reminder</h3>
+            <div class="small-muted">Plan • Remind • Track</div>
+          </div>
+          <div class="text-end">
+            <div class="small-muted">Today • <strong id="todayDate">—</strong></div>
+            <button class="btn btn-sm btn-outline-secondary mt-2" id="viewCalendarBtn">View calendar</button>
+          </div>
+        </header>
+
+        <main class="row g-3">
+          <!-- Left: Upcoming reminders -->
+          <section class="col-12 col-lg-7">
+            <div class="card p-3">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="mb-0">Upcoming Reminders</h5>
+                <div class="small-muted">3 active • 1 missed</div>
+              </div>
+              <div class="list-scroll">
+                <div class="mb-3 p-3 rounded-2 pill-card">
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                          <h6 class="mb-0">Vitamin D</h6>
+                          <div class="small-muted">Supplement — 1000 IU — Oral</div>
+                        </div>
+                        <div class="text-end">
+                          <div class="time-badge">8:00 AM</div>
+                          <div class="next-dose">Next dose: in 2h 10m</div>
+                        </div>
+                      </div>
+                      <div class="mt-2 d-flex gap-2">
+                        <button class="btn btn-sm btn-outline-primary">Mark taken</button>
+                        <button class="btn btn-sm btn-outline-secondary">Snooze</button>
+                        <button class="btn btn-sm btn-link text-danger">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3 p-3 rounded-2 pill-card">
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                          <h6 class="mb-0">Amoxicillin</h6>
+                          <div class="small-muted">500 mg — Capsule — 3x/day</div>
+                        </div>
+                        <div class="text-end">
+                          <div class="time-badge">2:00 PM</div>
+                          <div class="next-dose">Next dose: 6h</div>
+                        </div>
+                      </div>
+                      <div class="mt-2 d-flex gap-2">
+                        <button class="btn btn-sm btn-outline-primary">Mark taken</button>
+                        <button class="btn btn-sm btn-outline-secondary">Snooze</button>
+                        <button class="btn btn-sm btn-link text-danger">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3 p-3 rounded-2 pill-card">
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                          <h6 class="mb-0">Insulin (Before dinner)</h6>
+                          <div class="small-muted">Dosage as prescribed — Injection</div>
+                        </div>
+                        <div class="text-end">
+                          <div class="time-badge">6:30 PM</div>
+                          <div class="next-dose">Next dose: 10h</div>
+                        </div>
+                      </div>
+                      <div class="mt-2 d-flex gap-2">
+                        <button class="btn btn-sm btn-outline-primary">Mark taken</button>
+                        <button class="btn btn-sm btn-outline-secondary">Snooze</button>
+                        <button class="btn btn-sm btn-link text-danger">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Right: Summary -->
+          <aside class="col-12 col-lg-5">
+            <div class="card p-3 mb-3">
+              <h6 class="mb-2">Today's Summary</h6>
+              <div class="d-flex justify-content-between small-muted mb-2">
+                <div>Taken</div>
+                <div><strong id="takenCount">1</strong> / 4</div>
+              </div>
+              <div class="progress mb-3" style="height:12px">
+                <div id="progressBar" class="progress-bar" role="progressbar" style="width:25%"></div>
+              </div>
+              <div class="small-muted">Next upcoming:</div>
+              <div class="fw-semibold">Vitamin D — 8:00 AM</div>
+              <hr>
+              <div class="small-muted">Quick actions</div>
+              <div class="d-flex gap-2 mt-2">
+                <button class="btn btn-outline-secondary btn-sm" id="snoozeAll">Snooze all 10 min</button>
+                <button class="btn btn-outline-danger btn-sm" id="markAll">Mark all taken</button>
+              </div>
+            </div>
+          </aside>
+        </main>
+        <footer>Mockup • No backend • Interactive demo</footer>
+      </div>
+
+      <!-- Add Reminder Tab -->
+      <div class="tab-pane fade" id="addTab" role="tabpanel">
+        <div class="card p-4">
+          <h5 class="mb-3">Add Medicine Reminder</h5>
+          <form id="addForm">
+            <div class="mb-3">
+              <label class="form-label small">Name</label>
+              <input class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small">Dosage / Notes</label>
+              <input class="form-control" id="notes">
+            </div>
+            <div class="mb-3 d-flex gap-3">
+              <div style="flex:1">
+                <label class="form-label small">Date & Time</label>
+                <input type="datetime-local" id="datetime" class="form-control" required>
+              </div>
+              <div style="width:150px">
+                <label class="form-label small">Frequency</label>
+                <select id="freq" class="form-select">
+                  <option value="once">Once</option>
+                  <option value="daily" selected>Daily</option>
+                  <option value="3x">3x/day</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="notify" checked>
+              <label class="form-check-label small" for="notify">Send notifications</label>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-primary btn-lg px-4">Save reminder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const todayDate = document.getElementById('todayDate');
+    todayDate.textContent = new Date().toLocaleDateString();
+
+    const addForm = document.getElementById('addForm');
+    addForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('(Demo) Reminder saved — in a real app this would persist.');
+      addForm.reset();
+    });
+
+    document.getElementById('snoozeAll').addEventListener('click', () => alert('(Demo) Snoozed all reminders by 10 minutes'));
+    document.getElementById('markAll').addEventListener('click', () => alert('(Demo) Marked all reminders as taken'));
+  </script>
+</body>
+</html>
