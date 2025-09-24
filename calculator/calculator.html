@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="center-screen">
+    <div class="login-card">
+      <div class="logo-circle">
+        <img src="icons/calculator.png"Logo" class="logo-img">
+      </div>
+      <h1 class="title">This is a Calculator</h1>
+      <p class="subtitle">Sign in to access the calculator</p>
+
+      <!-- Email field -->
+<div class="input-group">
+  <span class="input-icon">
+    <img src="icons/envelope-alt (1).png" alt="Email Icon">
+  </span>
+  <input type="email" id="email" placeholder="Email">
+</div>
+
+<!-- Password field with toggle eye -->
+<div class="input-group">
+  <span class="input-icon">
+    <img src="icons/lock (1).png" alt="Lock Icon">
+  </span>
+  <input type="password" id="password" placeholder="Password">
+  <span id="toggle-pass" class="toggle-eye">👁</span>
+</div>
+
+      <button id="login-btn" class="cta-btn wide">Sign In</button>
+      <p id="login-msg" class="validation-msg"></p>
+      <small class="hint">
+  Password must include:
+  <div id="pw-requirements" class="req-row">
+    <span id="req-lower" class="req">Lower</span>
+    <span id="req-upper" class="req">Upper</span>
+    <span id="req-digit" class="req">Digit</span>
+    <span id="req-special" class="req">Special</span>
+    <span id="req-length" class="req">8+ chars</span>
+  </div>
+</small>
+    </div>
+  </div>
+
+<!-- Calculator Screen -->
+<div id="calc-screen" class="hidden center-screen">
+  <div class="calc-card">
+    <h1>Calculator</h1>
+
+    <!-- Error space -->
+    <div id="error-container"><p id="error-msg"></p></div>
+
+    <!-- New dual display -->
+    <div id="display-container">
+      <div id="history"></div>
+      <div id="current"></div>
+    </div>
+
+    <div class="calc-grid">
+      <!-- Row 1 -->
+      <button class="calc-btn op" data-val="%">%</button>
+      <button class="calc-btn action" id="clear-entry">CE</button>
+      <button class="calc-btn action" id="clear-all">C</button>
+      <button class="calc-btn action" id="backspace">⌫</button>
+
+
+      <!-- Row 2 -->
+      <button class="calc-btn" data-val="7">7</button>
+      <button class="calc-btn" data-val="8">8</button>
+      <button class="calc-btn" data-val="9">9</button>
+      <button class="calc-btn op" data-val="÷">÷</button>
+
+      <!-- Row 3 -->
+      <button class="calc-btn" data-val="4">4</button>
+      <button class="calc-btn" data-val="5">5</button>
+      <button class="calc-btn" data-val="6">6</button>
+      <button class="calc-btn op" data-val="×">×</button>
+
+      <!-- Row 4 -->
+      <button class="calc-btn" data-val="1">1</button>
+      <button class="calc-btn" data-val="2">2</button>
+      <button class="calc-btn" data-val="3">3</button>
+      <button class="calc-btn op" data-val="-">−</button>
+
+      <!-- Row 5 -->
+      <button class="calc-btn" data-val="0">0</button>
+      <button class="calc-btn" data-val=".">.</button>
+      <button class="calc-btn equals" id="equals">=</button>
+      <button class="calc-btn op" data-val="+">+</button>
+    </div>
+
+    <p class="logout"><a href="#" id="logout">Log out</a></p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
